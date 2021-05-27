@@ -85,3 +85,34 @@ function largestOfFour(arr) {
     return newArr;
 }
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+/*
+Repeat a given string str (first argument) for num times (second argument). 
+Return an empty string if num is not a positive number. 
+For the purpose of this challenge, do not use the built-in .repeat() method.
+*/
+function repeatStringNumTimes(str, num) {
+    let repeatedStr = "";
+    while(num > 0){
+        repeatedStr += str;
+        num--
+    }
+   return repeatedStr;
+}
+repeatStringNumTimes("abc", 3);
+
+/*
+Truncate a string (first argument) if it is longer than 
+the given maximum string length (second argument). 
+Return the truncated string with a ... ending.
+*/
+function truncateString(str, num) {
+    let newStr = '' 
+    if (str.length <= num){
+        return str
+    }else{
+        newStr = str.substr(0, num) + "..."
+    }
+    return newStr
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
